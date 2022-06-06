@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head style="background-color:black;">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Product Category</title>
+    <style type=text/css>
+body
+{
+height: 125vh;
+margin-top: 80px;
+padding: 30px;
+font-family: sans-serif;
+background-color: black;
+}
+header {
+background-color: black;
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+height: 100px;
+display: flex;
+align-items: center;
+box-shadow: 0 0 25px 0 black;
+}
+header * {
+display: inline;
+}
+header li {
+margin: 60px;
+}
+header li a {
+color: white;
+text-decoration: none;
+}
+.sidenav {
+  height: 200%;
+  width: 180px;
+  position: absolute;
+  z-index: 0;
+  top: 1;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+  display: block;
+  background-color: white;
+  width: 75%;
+  margin-left:10px;
+}
+
+.sidenav a:hover {
+  color: grey;
+}
+
+.main {
+  margin-left: 160px;
+  padding: 0px 10px;
+  color: white;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.image {
+width: 250px;
+height: 250px;
+position: relative;
+}
+
+.product {
+display: inline;
+}
+</style>
+</Head>
+<Body>
+<header>
+<nav>
+<ul>
+<li>
+<a href="#"><button style="position: relative; left: -33px" type="submit"><i class="fa fa-bars"></i></button> </a>
+</li>
+<li>
+<a href="#"> Sort By </a>
+</li>
+<li>
+<a href="#"> Latest </a>
+</li>
+<li>
+<a href="#"> Popular </a>
+</li>
+<li> <a href="#"> Top Sales </a>
+</li>
+<li>
+<a href="#">
+<select id="Price" name="Price">
+  <option value="Price">Price</option>
+  <option value="Ratings">Ratings</option>
+</select> </a>
+</li>
+<li>
+<a href="#">
+    <input type="text" placeholder="Search"></a>
+    <button style="position: relative; left: -33px; background-color: #50508B;" type="submit"><i class="fa fa-search"></i></button>
+</li>
+</ul>
+</nav>
+</header>
+
+<div class="sidenav">
+  <a style="background-color: #111; color: white;font-size: 18px;" href="#">By Category</a><br>
+  <a style="" href="#">Hammers <input type="checkbox"></a>
+  <a href="#">Wrench <input type="checkbox"></a>
+  <a href="#">Screwdriver <input type="checkbox"></a>
+  <a href="#">Drills <input type="checkbox"></a>
+  <a href="#">Cable Tie <input type="checkbox"></a>
+  <a href="#">Accessories <input type="checkbox"></a>
+<br><br><br>
+  <a href="#">Search Filter <button style="position: relative; right: -5px" type="submit"><i class="fa fa-filter"></i></button></a>
+  <br><br>
+  <a style="background-color: #111; color: white;font-size: 18px;" href="#">Shipped From</a><br>
+  <a href="#">Domestic <input type="checkbox"></a>
+  <a href="#">Overseas <input type="checkbox"></a>
+</div>
+
+
+<div class="main">
+    <img style="right: -60px" class="image" src="Decisions.jpg">
+    <img style="right: -235px" class="image" src="Decisions.jpg">
+    <img style="right: -410px" class="image" src="Decisions.jpg"><br>
+    <p class="product" style="position:relative; right: -90px">STANLEY Rubber Mallet</p>
+    <p class="product" style="position:relative; right: -387px">Set of Screws</p>
+    <p class="product" style="position:relative; right: -695px">Set of Screwdrivers</p><br>
+    <p class="product" style="position:relative; right: -150px">SGD 40</p>
+    <p class="product" style="position:relative; right: -515px">SGD 20/set</p>
+    <p class="product" style="position:relative; right: -860px">SGD 15/set</p><br><br><br><br><br>
+
+    <img style="right: -60px" class="image" src="Decisions.jpg">
+    <img style="right: -235px" class="image" src="Decisions.jpg">
+    <img style="right: -410px" class="image" src="Decisions.jpg"><br>
+    <p class="product" style="position:relative; right: -105px">MISUMI Pipe Wrench</p>
+    <p class="product" style="position:relative; right: -410px">INGCO Drills</p>
+    <p class="product" style="position:relative; right: -735px">Verne Cable ties</p><br>
+    <p class="product" style="position:relative; right: -150px">SGD 60</p>
+    <p class="product" style="position:relative; right: -525px">SGD 70</p>
+    <p class="product" style="position:relative; right: -905px">SGD 2</p><br>
+
+</div>
+</body>
+</html>

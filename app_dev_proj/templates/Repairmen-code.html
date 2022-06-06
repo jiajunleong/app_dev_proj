@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+{% block title %}Library Loan System - Create User{% endblock %}
+
+{% block navbar %}
+{% endblock %}
+
+{% block content %}
+{% from "includes/_formHelper.html" import render_field %}
+<body style="background-color:black;"><
+<h1 class="display-4" style="color: white; text-align: center;">Repairmen access code</h1>
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{ category }} alert-dismissible" role="alert">
+                <span>{{ message }}</span>
+                <button type="button" class="btn-close" data-dismiss="alert" >
+
+                </button>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+<form method="POST" action="">
+
+  <br>
+    <div class="form-group" style="color: white; text-align: center;">
+      {{ render_field(form.password, class="form-control") }}
+    </div>
+  <br>
+
+  <input type="submit" value="Submit" class="btn btn-primary" style="margin-left: 560px;"/>
+  <br>
+  <br>
+</form>
+{% endblock %}

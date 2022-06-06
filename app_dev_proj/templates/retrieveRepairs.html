@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Retrieve Repairmen{% endblock %}
+{% block navbar %}
+{% endblock %}
+{% block content %}
+<body style="background-color:black;"></body>
+
+<h1 class="display-4" style="color: white;">Retrieve Repairmen</h1>
+<div>
+  {% if count == 0 %}
+  <p style="color: white;">There are no users.</p>
+  {% elif count == 1 %}
+  <p style="color: white;">There is 1 user.</p>
+  {% else %}
+  <p style="color: white;">There are {{ count }} users.</p>
+  {% endif %}
+</div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th style="color: white;">Repairmen ID</th>
+        <th style="color: white;">First Name</th>
+        <th style="color: white;">Last Name</th>
+        <th style="color: white;">Services</th>
+        <th style="color: white;">Gender</th>
+        <th style="color: white;">Email</th>
+
+        <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for repair in repair_list %}
+      <tr>
+        <td style="color: white;">{{ repair.get_user_id() }}</td>
+        <td style="color: white;">{{ repair.get_first_name() }}</td>
+        <td style="color: white;">{{ repair.get_last_name() }}</td>
+        <td style="color: white;">{{ repair.get_Services() }}</td>
+        <td style="color: white;">{{ repair.get_gender() }}</td>
+        <td style="color: white;">{{ repair.get_email() }}</td>
+        <td><a href="/updateRepair/{{repair.get_user_id()}}" class="btn btn-warning">Update</a></td>
+        <td> <form action="{{url_for('deleteRepair', id=repair.get_user_id())}}" method="POST">
+            <input type="submit" value="Delete" class="btn btn-danger">
+        </form>
+        </td>
+
+
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Library Loan System - Retrieve Users{% endblock %}
+
+{% block navbar %}
+{% endblock %}
+
+{% block content %}
+<body style="background-color:black;"></body>
+<h1 class="display-4" style="color: white;">Retrieve comment</h1>
+<div>
+  {% if count == 0 %}
+  <p style="color: white;">There are no comment.</p>
+  {% elif count == 1 %}
+  <p style="color: white;">There is 1 comment.</p>
+  {% else %}
+  <p style="color: white;">There are {{ count }} review.</p>
+  {% endif %}
+</div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th style="color: white;">Review ID</th>
+        <th style="color: white;">First Name</th>
+        <th style="color: white;">Repairmen Name</th>
+        <th style="color: white;">Review</th>
+
+        <th></th>
+        <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for review in Reviews_list %}
+      <tr>
+        <td style="color: white;">{{ review.get_user_id() }}</td>
+        <td style="color: white;">{{ review.get_name() }}</td>
+        <td style="color: white;">{{ review.get_repairmen_name() }}</td>
+        <td style="color: white;">{{ review.get_review() }}</td>
+
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

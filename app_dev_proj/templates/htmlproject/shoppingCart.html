@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <style type=text/css>
+body
+{
+height: 125vh;
+margin-top: 80px;
+padding: 30px;
+font-family: sans-serif;
+background-color: black;
+}
+header {
+background-color: grey;
+position: absolute;
+left: 0;
+right: 0;
+top: 160px;
+height: 50px;
+display: flex;
+align-items: center;
+box-shadow: 0 0 25px 0 black;
+}
+header * {
+display: inline;
+}
+header li {
+margin: 108px;
+}
+header li a {
+color: white;
+text-decoration: none;
+}
+
+.firstProduct {
+display: inline;
+}
+.checkout {
+display: inline;
+}
+
+.quantity {
+ display: inline-block; }
+
+.quantity .input-text.qty {
+ width: 35px;
+ height: 29px;
+ padding: 0 5px;
+ text-align: center;
+ background-color: white;
+ border: 1px solid #efefef;
+ font-weight:bold;
+}
+
+.quantity.buttons_added {
+ text-align: center;
+ position: relative;
+ white-space: nowrap;
+ vertical-align: top;
+ right: -675px;
+ top: -155px;
+ }
+
+.quantity.buttons_added input {
+ display: inline-block;
+ margin: 0;
+ vertical-align: top;
+ box-shadow: none;
+}
+
+.quantity.buttons_added .minus,
+.quantity.buttons_added .plus {
+ padding: 7px 10px 8px;
+ height: 31px;
+ background-color: #ffffff;
+ border: 1px solid #efefef;
+ cursor:pointer;
+ font-weight:bold;}
+
+.quantity.buttons_added .minus {
+ border-right: 0;}
+
+.quantity.buttons_added .plus {
+ border-left: 0; }
+
+.quantity.buttons_added .minus:hover,
+.quantity.buttons_added .plus:hover {
+ background: #eeeeee; }
+
+.quantity input::-webkit-outer-spin-button,
+.quantity input::-webkit-inner-spin-button {
+ -webkit-appearance: none;
+ -moz-appearance: none;
+ margin: 0; }
+
+ .quantity.buttons_added .minus:focus,
+.quantity.buttons_added .plus:focus {
+ outline: none; }
+
+
+</style>
+
+</head>
+<body style="background-color: black;">
+<h1 style="text-align:center; color: white;position: relative; top: -60px;">Shopping Cart</h1>
+<header>
+<nav>
+<ul>
+<li>
+<a href="#">Product <input type="checkbox"></a>
+</li>
+<li>
+<a href="#"> Unit Price </a>
+</li>
+<li>
+<a href="#"> Quantity </a>
+</li>
+<li>
+<a href="#"> Total Price </a>
+</li>
+<li> <a href="#"> Actions </a>
+</li>
+</ul>
+</nav>
+</header><br><br><br><br><br><br>
+<div class="firstProduct">
+    <input style="position: relative; right: -70px; top: -60px;" type="checkbox">
+    <img style="position: relative; right: -100px;" src="Decisions.jpg" width="150px" height="150px">
+    <p style="position: relative; right: -410px; top: -110px; color: white;">SGD 40</p>
+    <div class="quantity buttons_added">
+    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus" width="50%;">
+    </div>
+    <p style="color: white; position:relative;right:-980px;top:-200px;">SGD 40</p>
+    <p style="color: white; position:relative;right:-1275px;top:-235px;">Delete</p>
+</div>
+<div class="checkout">
+    <p style="color: white; text-align:right;position:relative;left:-250px;top:-100px;">Total Price: SGD 40</p>
+    <button style="color: white;background-color: #50508B;height:30px;position:relative;right:-1230px;top:-140px;" type="submit" value="Check Out">Check Out</button>
+</div>
+</body>
+</html>

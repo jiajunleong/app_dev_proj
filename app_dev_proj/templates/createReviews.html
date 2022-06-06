@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Library Loan System - Create User{% endblock %}
+
+{% block navbar %}
+{% endblock %}
+
+{% block content %}
+{% from "includes/_formHelper.html" import render_field %}
+<body style="background-color:black;"><
+<h1 class="display-4" style="color: white; text-align: center;">Create review</h1>
+
+<form method="POST" action="">
+  <div class="form-group" style="color: white; text-align: center;">
+    {{ render_field(form.name, class="form-control") }}
+  </div>
+  <br>
+  <div class="form-group" style="color: white; text-align: center;">
+    {{ render_field(form.repairmen_name, class="form-control") }}
+  </div>
+  <br>
+  <div class="form-group" style="color: white; text-align: center;">
+    {{ render_field(form.review, class="form-control") }}
+  </div>
+  <br>
+
+
+    <br>
+  </div>
+  <input type="submit" value="Submit" class="btn btn-primary" style="margin-left: 560px;"/>
+  <br>
+  <br>
+</form>
+</body>
+{% endblock %}
+
